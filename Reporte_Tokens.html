@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reporte de Tokens - PromptZal</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f6f9; }
+h1 { color: #1e3a8a; }
+table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #1e3a8a; color: white; }
+tr:hover { background-color: #f1f5f9; }
+</style>
+</head>
+<body>
+<h1>Reporte de Tokens Reconocidos</h1>
+<table>
+<tr><th>#</th><th>Lexema</th><th>Tipo de Token</th><th>Fila</th><th>Columna</th></tr>
+<tr><td>1</td><td>@modelo</td><td>DIRECTIVA_MODELO</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>&quot;claude-sonnet-4-6&quot;</td><td>CADENA</td><td>1</td><td>9</td></tr>
+<tr><td>3</td><td>AGENTE</td><td>PR_AGENTE</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>traductor</td><td>IDENTIFICADOR</td><td>2</td><td>8</td></tr>
+<tr><td>5</td><td>{</td><td>LLAVE_IZQ</td><td>2</td><td>18</td></tr>
+<tr><td>6</td><td>contexto</td><td>PR_CONTEXTO</td><td>3</td><td>1</td></tr>
+<tr><td>7</td><td>=</td><td>IGUAL</td><td>3</td><td>10</td></tr>
+<tr><td>8</td><td>&quot;Eres un traductor profesional&quot;</td><td>CADENA</td><td>3</td><td>12</td></tr>
+<tr><td>9</td><td>variable</td><td>PR_VARIABLE</td><td>4</td><td>1</td></tr>
+<tr><td>10</td><td>texto</td><td>IDENTIFICADOR</td><td>4</td><td>10</td></tr>
+<tr><td>11</td><td>=</td><td>IGUAL</td><td>4</td><td>16</td></tr>
+<tr><td>12</td><td>&quot;Hola mundo, bienvenidos al laboratorio&quot;</td><td>CADENA</td><td>4</td><td>18</td></tr>
+<tr><td>13</td><td>TRADUCIR</td><td>CMD_TRADUCIR</td><td>5</td><td>1</td></tr>
+<tr><td>14</td><td>texto</td><td>IDENTIFICADOR</td><td>5</td><td>10</td></tr>
+<tr><td>15</td><td>EN</td><td>CON_EN</td><td>5</td><td>16</td></tr>
+<tr><td>16</td><td>&quot;ingles&quot;</td><td>CADENA</td><td>5</td><td>19</td></tr>
+<tr><td>17</td><td>-&gt;</td><td>FLECHA</td><td>5</td><td>28</td></tr>
+<tr><td>18</td><td>resultado</td><td>IDENTIFICADOR</td><td>5</td><td>31</td></tr>
+<tr><td>19</td><td>}</td><td>LLAVE_DER</td><td>6</td><td>1</td></tr>
+<tr><td>20</td><td>EJECUTAR</td><td>PR_EJECUTAR</td><td>7</td><td>1</td></tr>
+<tr><td>21</td><td>traductor</td><td>IDENTIFICADOR</td><td>7</td><td>10</td></tr>
+<tr><td>22</td><td>EXPORTAR</td><td>PR_EXPORTAR</td><td>8</td><td>1</td></tr>
+<tr><td>23</td><td>resultado</td><td>IDENTIFICADOR</td><td>8</td><td>10</td></tr>
+</table>
+</body>
+</html>
