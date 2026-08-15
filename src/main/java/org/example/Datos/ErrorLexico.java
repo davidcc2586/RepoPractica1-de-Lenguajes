@@ -28,4 +28,9 @@ public class ErrorLexico {
     public int getColumna() {
         return columna;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Lexema: '%s' | Descripción: %s | Fila: %d | Col: %d", lexema, descripcion, fila, columna);
+    }
 }

@@ -18,27 +18,45 @@ tr:hover { background-color: #f1f5f9; }
 <tr><th>#</th><th>Lexema</th><th>Tipo de Token</th><th>Fila</th><th>Columna</th></tr>
 <tr><td>1</td><td>@modelo</td><td>DIRECTIVA_MODELO</td><td>1</td><td>1</td></tr>
 <tr><td>2</td><td>&quot;claude-sonnet-4-6&quot;</td><td>CADENA</td><td>1</td><td>9</td></tr>
-<tr><td>3</td><td>AGENTE</td><td>PR_AGENTE</td><td>2</td><td>1</td></tr>
-<tr><td>4</td><td>traductor</td><td>IDENTIFICADOR</td><td>2</td><td>8</td></tr>
-<tr><td>5</td><td>{</td><td>LLAVE_IZQ</td><td>2</td><td>18</td></tr>
-<tr><td>6</td><td>contexto</td><td>PR_CONTEXTO</td><td>3</td><td>1</td></tr>
-<tr><td>7</td><td>=</td><td>IGUAL</td><td>3</td><td>10</td></tr>
-<tr><td>8</td><td>&quot;Eres un traductor profesional&quot;</td><td>CADENA</td><td>3</td><td>12</td></tr>
-<tr><td>9</td><td>variable</td><td>PR_VARIABLE</td><td>4</td><td>1</td></tr>
-<tr><td>10</td><td>texto</td><td>IDENTIFICADOR</td><td>4</td><td>10</td></tr>
-<tr><td>11</td><td>=</td><td>IGUAL</td><td>4</td><td>16</td></tr>
-<tr><td>12</td><td>&quot;Hola mundo, bienvenidos al laboratorio&quot;</td><td>CADENA</td><td>4</td><td>18</td></tr>
-<tr><td>13</td><td>TRADUCIR</td><td>CMD_TRADUCIR</td><td>5</td><td>1</td></tr>
-<tr><td>14</td><td>texto</td><td>IDENTIFICADOR</td><td>5</td><td>10</td></tr>
-<tr><td>15</td><td>EN</td><td>CON_EN</td><td>5</td><td>16</td></tr>
-<tr><td>16</td><td>&quot;ingles&quot;</td><td>CADENA</td><td>5</td><td>19</td></tr>
-<tr><td>17</td><td>-&gt;</td><td>FLECHA</td><td>5</td><td>28</td></tr>
-<tr><td>18</td><td>resultado</td><td>IDENTIFICADOR</td><td>5</td><td>31</td></tr>
-<tr><td>19</td><td>}</td><td>LLAVE_DER</td><td>6</td><td>1</td></tr>
-<tr><td>20</td><td>EJECUTAR</td><td>PR_EJECUTAR</td><td>7</td><td>1</td></tr>
-<tr><td>21</td><td>traductor</td><td>IDENTIFICADOR</td><td>7</td><td>10</td></tr>
-<tr><td>22</td><td>EXPORTAR</td><td>PR_EXPORTAR</td><td>8</td><td>1</td></tr>
-<tr><td>23</td><td>resultado</td><td>IDENTIFICADOR</td><td>8</td><td>10</td></tr>
+<tr><td>3</td><td>@rol</td><td>DIRECTIVA_ROL</td><td>2</td><td>1</td></tr>
+<tr><td>4</td><td>&quot;especialista en recursos humanos&quot;</td><td>CADENA</td><td>2</td><td>6</td></tr>
+<tr><td>5</td><td>AGENTE</td><td>PR_AGENTE</td><td>4</td><td>1</td></tr>
+<tr><td>6</td><td>entrevistador</td><td>IDENTIFICADOR</td><td>4</td><td>8</td></tr>
+<tr><td>7</td><td>{</td><td>LLAVE_IZQ</td><td>4</td><td>22</td></tr>
+<tr><td>8</td><td>contexto</td><td>PR_CONTEXTO</td><td>5</td><td>1</td></tr>
+<tr><td>9</td><td>=</td><td>IGUAL</td><td>5</td><td>10</td></tr>
+<tr><td>10</td><td>&quot;Eres un especialista en seleccion de personal&quot;</td><td>CADENA</td><td>5</td><td>12</td></tr>
+<tr><td>11</td><td>variable</td><td>PR_VARIABLE</td><td>6</td><td>1</td></tr>
+<tr><td>12</td><td>puesto</td><td>IDENTIFICADOR</td><td>6</td><td>10</td></tr>
+<tr><td>13</td><td>=</td><td>IGUAL</td><td>6</td><td>17</td></tr>
+<tr><td>14</td><td>&quot;desarrollador de software&quot;</td><td>CADENA</td><td>6</td><td>19</td></tr>
+<tr><td>15</td><td>GENERAR</td><td>CMD_GENERAR</td><td>8</td><td>1</td></tr>
+<tr><td>16</td><td>preguntas</td><td>IDENTIFICADOR</td><td>8</td><td>9</td></tr>
+<tr><td>17</td><td>DESDE</td><td>CON_DESDE</td><td>8</td><td>19</td></tr>
+<tr><td>18</td><td>&quot;preguntas tecnicas y de comportamiento para el puesto&quot;</td><td>CADENA</td><td>8</td><td>25</td></tr>
+<tr><td>19</td><td>-&gt;</td><td>FLECHA</td><td>8</td><td>81</td></tr>
+<tr><td>20</td><td>entrevista</td><td>IDENTIFICADOR</td><td>8</td><td>84</td></tr>
+<tr><td>21</td><td>PREGUNTAR</td><td>CMD_PREGUNTAR</td><td>9</td><td>1</td></tr>
+<tr><td>22</td><td>&quot;Que habilidades son mas importantes para este puesto?&quot;</td><td>CADENA</td><td>9</td><td>11</td></tr>
+<tr><td>23</td><td>SOBRE</td><td>CON_SOBRE</td><td>9</td><td>67</td></tr>
+<tr><td>24</td><td>puesto</td><td>IDENTIFICADOR</td><td>9</td><td>73</td></tr>
+<tr><td>25</td><td>-&gt;</td><td>FLECHA</td><td>9</td><td>80</td></tr>
+<tr><td>26</td><td>habilidades</td><td>IDENTIFICADOR</td><td>9</td><td>83</td></tr>
+<tr><td>27</td><td>ANALIZAR</td><td>CMD_ANALIZAR</td><td>10</td><td>1</td></tr>
+<tr><td>28</td><td>entrevista</td><td>IDENTIFICADOR</td><td>10</td><td>10</td></tr>
+<tr><td>29</td><td>SOBRE</td><td>CON_SOBRE</td><td>10</td><td>21</td></tr>
+<tr><td>30</td><td>&quot;dificultad y relevancia de las preguntas&quot;</td><td>CADENA</td><td>10</td><td>27</td></tr>
+<tr><td>31</td><td>-&gt;</td><td>FLECHA</td><td>10</td><td>70</td></tr>
+<tr><td>32</td><td>evaluacion</td><td>IDENTIFICADOR</td><td>10</td><td>73</td></tr>
+<tr><td>33</td><td>}</td><td>LLAVE_DER</td><td>11</td><td>1</td></tr>
+<tr><td>34</td><td>EJECUTAR</td><td>PR_EJECUTAR</td><td>13</td><td>1</td></tr>
+<tr><td>35</td><td>entrevistador</td><td>IDENTIFICADOR</td><td>13</td><td>10</td></tr>
+<tr><td>36</td><td>EXPORTAR</td><td>PR_EXPORTAR</td><td>14</td><td>1</td></tr>
+<tr><td>37</td><td>entrevista</td><td>IDENTIFICADOR</td><td>14</td><td>10</td></tr>
+<tr><td>38</td><td>,</td><td>COMMA</td><td>14</td><td>20</td></tr>
+<tr><td>39</td><td>habilidades</td><td>IDENTIFICADOR</td><td>14</td><td>22</td></tr>
+<tr><td>40</td><td>,</td><td>COMMA</td><td>14</td><td>33</td></tr>
+<tr><td>41</td><td>evaluacion</td><td>IDENTIFICADOR</td><td>14</td><td>35</td></tr>
 </table>
 </body>
 </html>
