@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PoyectoLenguajes:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PoyectoLenguajes_jar</output-path>
+    <root id="archive" name="practica1Lenguajes.jar">
+      <element id="module-output" name="practica1Lenguajes" />
+    </root>
+  </artifact>
+</component>

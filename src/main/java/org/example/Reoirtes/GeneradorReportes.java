@@ -1,6 +1,7 @@
 package org.example.Reoirtes;
 
 import org.example.Datos.ErrorLexico;
+import org.example.Datos.TipoToken;
 import org.example.Datos.Token;
 
 import java.io.*;
@@ -89,5 +90,50 @@ public class GeneradorReportes {
         } catch (IOException e) {
             System.err.println("Error al guardar el reporte: " + e.getMessage());
         }
+    }
+
+    public static void generarReporteEstadisticasHTML(List<Token> tokens, List<ErrorLexico> errores, int totalLineas, String rutaSalida) {
+        // Arreglo de contadores del mismo tamaño que el Enum
+        TipoToken[] tipos = TipoToken.values();
+        int[] conteo = new int[tipos.length];
+
+        // Incrementar el contador según el ordinal de cada tipo de token
+        for (Token t : tokens) {
+            if (t.getTipo() != null) {
+                conteo[t.getTipo().ordinal()]++;
+            }
+        }
+
+        StringBuilder html = new StringBuilder();
+        html.append("<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n");
+        html.append("<meta charset=\"UTF-8\">\n<title>Reporte de Estadísticas - PromptZal</title>\n");
+        html.append("<style>\n");
+        html.append("body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f6f9; }\n");
+        html.append("h1, h2 { color: #1e3a8a; }\n");
+        html.append(".summary-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }\n");
+        html.append("table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }\n");
+        html.append("th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }\n");
+        html.append("th { background-color: #1e3a8a; color: white; }\n");
+        html.append("</style>\n</head>\n<body>\n");
+
+        html.append("<h1>Resumen Estadístico del Análisis Léxico</h1>\n");
+        html.append("<div class=\"summary-card\">\n");
+        html.append("<p><strong>Total de Líneas Analizadas:</strong> ").append(totalLineas).append("</p>\n");
+        html.append("<p><strong>Total de Tokens Reconocidos:</strong> ").append(tokens.size()).append("</p>\n");
+        html.append("<p><strong>Total de Errores Léxicos:</strong> ").append(errores.size()).append("</p>\n");
+        html.append("</div>\n");
+
+        html.append("<h2>Frecuencia por Tipo de Token</h2>\n");
+        html.append("<table>\n<tr><th>Tipo de Token</th><th>Cantidad Detectada</th></tr>\n");
+
+        // Recorrer el arreglo e imprimir solo los tipos que aparecieron al menos una vez
+        for (int i = 0; i < tipos.length; i++) {
+            if (conteo[i] > 0) {
+                html.append("<tr><td>").append(tipos[i]).append("</td><td>").append(conteo[i]).append("</td></tr>\n");
+            }
+        }
+
+        html.append("</table>\n</body>\n</html>");
+        escribirArchivo(rutaSalida, html.toString());
     }
 }
